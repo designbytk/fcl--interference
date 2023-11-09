@@ -1,0 +1,11 @@
+.site-logo
+  if page.url != "/accessories/"
+    include ../svg/atd-simple-logo-01.svg
+  else
+    include ../svg/atd-car-logo-01.svg
+  if page.url == "/"
+    p.logo-text Auto Trim Design
+  else if page.url == "/accessories/"
+    p.logo-text Accessories
+  else
+    a(href="/").logo-text Auto Trim Design

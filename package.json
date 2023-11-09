@@ -1,0 +1,26 @@
+{
+  "name": "interference",
+  "version": "1.0.0",
+  "description": "Website for Frank Longo | FCL Consulting and Sales | fcl-cas.com",
+  "main": "index.js",
+  "scripts": {
+    "dev:eleventy": "npx eleventy",
+    "dev:sass": "sass src/sass/main.sass:dist/css/main.css --no-charset --no-source-map --style compressed",
+    "dev": "npm run dev:eleventy && npm run dev:sass"
+  },
+  "author": "t.k.langston | designbytk.com | lnghll.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/designbytk/fcl--interference.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "browserslist": "^4.22.1",
+    "dotenv": "^16.0.3",
+    "esbuild": "^0.19.5",
+    "lightningcss": "^1.22.1",
+    "pug": "^3.0.2",
+    "sass": "^1.69.5"
+  }
+}

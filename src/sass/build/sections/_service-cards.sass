@@ -1,0 +1,42 @@
+.service
+  padding-inline: 2rem
+  &-cards
+    display: grid
+    grid-template-columns: 1fr
+
+  &-card
+    padding-left: calc(21px + 1rem)
+    margin-bottom: 3rem
+    &-header
+      padding-bottom: 3rem
+      text-transform: uppercase
+      font-family: var(--atd-mono-font)
+      display: flex
+      align-items: center
+      line-height: 1
+      &::before
+        content: url(../img/atd-services-chevron.png)
+        margin-right: 1rem
+        margin-left: calc(-21px - 1rem)
+    &-desc
+      padding-bottom: 2rem
+    ul
+      list-style-position: inside
+      list-style: none
+
+      li
+        font-weight: 500
+        line-height: 1.5
+        &::before
+          content: '\25A0'
+          color: var(--atd-primary-dark)
+          display: inline-block
+          width: 2ch
+
+@include breakpoint(md)
+  .service
+    padding-inline: 0
+    &-cards
+      grid-template-columns: repeat(3, 1fr)
+    &-card
+      margin-bottom: 0

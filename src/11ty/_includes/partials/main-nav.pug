@@ -1,0 +1,17 @@
+
+input#mobile-menu(type="checkbox")
+label(for="mobile-menu")
+  span
+nav
+  ul
+    li
+      a(href="/")
+        include ../svg/home.svg
+    li 
+      a(href=src = (page.url == "/") ? "#services" : "/#services") Services
+    li 
+      a(href="/gallery/") Gallery
+    li 
+      a(href="/accessories/") Accessories
+    li 
+      a(href="/contact/") Contact

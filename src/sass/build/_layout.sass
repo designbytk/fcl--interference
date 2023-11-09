@@ -1,0 +1,159 @@
+// Header and Navbar - likely will be inlined for improved page speed
+header
+  position: fixed
+  right: 0
+  left: 0
+  display: flex
+  justify-content: center
+  z-index: 199
+  // flex-direction: column
+
+  > div
+    height: 6rem
+    align-items: center
+    display: flex
+    width: 100%
+    padding-left: 2rem
+    // flex-direction: column
+
+
+  .site-logo
+    flex-grow: 1
+    display: flex
+    align-items: center
+
+    svg
+      width: 60px
+      margin-right: 1rem
+      transition: all .3s ease
+
+  &.is-scrolled
+    .site-logo
+      svg
+        // width: 75px
+        opacity: .6
+        color: var(--atd-primary)
+        // margin-right: 1.2rem
+    .logo-text
+      transition: all .3s ease
+      // letter-spacing: .5rem
+
+
+@include breakpoint(md)
+  header
+    > div
+      flex-direction: column
+      width: min(95%, 1440px)
+      padding-left: 0
+
+    .site-logo
+      flex-grow: 1
+      display: flex
+      align-items: center
+
+      svg
+        width: 100px
+        margin-right: 2rem
+        // transition: all .3s ease
+    &.is-scrolled
+      .site-logo
+        display: flex
+        svg
+          width: 75px
+          opacity: .6
+          color: var(--atd-primary)
+          margin-right: 1.2rem
+
+      .logo-text
+        transition: all .3s ease
+        letter-spacing: .5rem
+
+
+// Main container - constrained width + Main header constrained width
+
+main
+  width: 100%
+  margin-inline: auto
+  
+  
+@include breakpoint(sm)
+  main
+    max-width: 540px
+
+@include breakpoint(md)
+  main
+    max-width: 720px
+
+@include breakpoint(lg)
+  header
+    > div
+      flex-direction: row
+  main
+    max-width: 960px
+
+@include breakpoint(xl) 
+  main
+    max-width: 1140px
+
+@include breakpoint(xxl)
+  main
+    max-width: 1320px
+
+// Sections
+
+@import 'sections/service-cards'
+
+.section-cta
+  margin-block: 3rem
+  background-color: var(--atd-primary-action)
+  // background-color: rgba(0, 0, 0, .3)
+  display: flex
+  align-items: center
+  text-transform: uppercase
+  gap: 1rem
+  margin-inline: 1rem
+  flex-direction: column
+  padding: 3rem 3rem 3rem 3rem
+
+  p
+    font-size: 1.4rem
+    flex-grow: 1
+    text-align: center
+
+  a.cta-btn
+    font-size: 1.2rem
+    color: var(--atd-bright-white)
+    padding-block: 1rem
+    padding-inline: 3rem
+    // background-color: rgba(0, 0, 0, .6) 
+    background-color: rgba(255, 33, 26,.4)
+    text-decoration: none
+    text-align: center
+
+    &:hover
+      background-color: rgba(255, 33, 26,.8)
+      
+
+@include breakpoint(md)
+  .section-cta
+    margin-inline: 2rem
+    flex-direction: row
+    padding: 3rem 3rem 3rem 0
+
+    a[href="/#services"]
+      display: none
+
+@include breakpoint(lg)
+  .section-cta
+    a[href="/#services"]
+      display: inherit
+
+      
+
+@import 'sections/vehicle-wraps'
+
+@import 'sections/contact'
+
+@import 'sections/footer'
+
+  

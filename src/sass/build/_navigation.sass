@@ -1,0 +1,202 @@
+header
+  transition: all .3s ease
+
+  a
+    text-decoration: none
+
+    &.logo-text
+      padding: 0
+      
+  &.is-scrolled
+    background-color: var(--atd-navbar-bg)
+
+  // https://github.com/Ivy-Walobwa/responsive-pure-css-menu/blob/main/index.html
+  // Mobile Menu
+  /* Nav menu */
+  nav
+    width: 100%
+    // height: 100%
+    position: fixed
+    background-color: var(--atd-body-bg)
+    overflow: hidden
+    bottom: 0
+    top: 0
+    left: 0
+    // position: fixed
+    // bottom: 0
+    // background-color: var(--atd-primary)
+    // transition: all .3s ease
+
+    ul
+      display: flex
+      list-style: none
+      gap: 0
+      // justify-content: space-around
+      flex-direction: column
+      padding: 6rem 2rem
+
+      li:nth-child(1)
+        a
+          display: flex
+          align-items: center
+          &::after
+            content: 'Home'
+            color: var(--atd-primary-muted)
+            font-size: 1.2rem
+            font-family: var(--atd-sans-font)
+            letter-spacing: .4ch
+            text-transform: uppercase
+            text-decoration: none
+            margin-left: .6rem
+
+        // &:hover
+        //   color: var(--atd-bright-white)
+
+  a
+    color: var(--atd-primary-muted)
+    font-size: 1.2rem
+    font-family: var(--atd-sans-font)
+    letter-spacing: .4ch
+    text-transform: uppercase
+    text-decoration: none
+    padding: 2rem
+    display: block
+
+    &[href='#services']
+      display: none
+            
+
+      
+      
+  // .menu a
+  //   display: block
+  //   padding: 30px
+  //   color: var(--atd-bright-white)
+
+
+  // .menu a:hover
+  //   background-color: var(--grey)
+
+
+  nav
+    max-height: 0
+    transition: max-height .3s ease-out
+
+  /* Menu Icon */
+
+  input
+    display: none
+
+  label
+    cursor: pointer
+    float: right
+    padding: 2rem
+    z-index: 199
+
+    span
+      background: var(--atd-bright-white)
+      display: block
+      height: 2px
+      position: relative
+      width: 24px
+
+      &::before,
+      &::after
+        background: var(--atd-bright-white)
+        content: ''
+        display: block
+        height: 100%
+        position: absolute
+        transition: all .2s ease-out
+        width: 100%
+
+      &::before
+        top: .5rem
+
+      &::after
+        top: -.5rem
+
+
+  /* Toggle menu icon */
+
+  input:checked ~ nav
+    max-height: 100%
+
+
+  input:checked ~ label span 
+    background: transparent
+
+
+  input:checked ~ label span::before
+    transform: rotate(-45deg)
+    top:0
+
+
+
+  input:checked ~ label span::after
+    transform: rotate(45deg)
+    top:0
+
+
+
+@include breakpoint(md)
+  header
+    label
+      display: none
+    nav
+      width: calc( 100vw - 4rem )
+      position: fixed
+      bottom: 2rem
+      background-color: var(--atd-primary)
+      transition: all .3s ease
+      // display: block
+      max-height: inherit
+      top: auto
+      left: auto
+
+      ul
+        flex-direction: row
+        padding: 0
+        gap: 0
+        justify-content: space-between
+
+        li
+          a
+            font-size: .8rem
+            
+            &[href='#services']
+              display: block
+
+        li:nth-child(1)
+          a
+            &::after
+              content: ''
+
+      &.hide-nav
+        opacity: 0
+    a
+      color: var(--atd-bright-white)
+      display: block
+      padding: 1rem 1rem
+
+
+@include breakpoint(lg)
+  header
+    nav
+      position: relative
+      bottom: auto
+      width: auto
+      background-color: inherit
+
+      ul
+        gap: 2rem
+
+        &::before
+          display: none
+
+    a
+      color: var(--atd-primary-muted)
+      padding: inherit
+
+      &:hover
+        color: var(--atd-bright-white)

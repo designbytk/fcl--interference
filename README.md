@@ -5,11 +5,11 @@ Build and development of the FCL Consulting and Sales website
 ##  Goals
 
 - One Page Layout
-- Professional Bio
-- Company Bio
-- Companies working with
-- Video profiles
-- Simple contact
+  - Professional Bio > About
+  - Company Bio > Company
+  - Companies working with > Partners
+  - Video profiles > Profiles
+  - Simple contact > Contact
   
 ## Tech Stack
 

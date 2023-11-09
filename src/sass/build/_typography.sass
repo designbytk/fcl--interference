@@ -44,16 +44,16 @@
  
 // Font
 :root
-  --atd-sans-font: 'IBM Plex Sans', sans-serif
-  --atd-mono-font: 'IBM Plex Mono', sans-serif
+  --fcs-sans-font: 'IBM Plex Sans', sans-serif
+  --fcs-mono-font: 'IBM Plex Mono', sans-serif
   --fcs-logo-font: 'Kumbh Sans', sans-serif
 body
-  font-family: var(--atd-sans-font)
+  font-family: var(--fcs-sans-font)
   font-weight: 400
-  color: var(--atd-off-white)
+  color: var(--fcs-off-white)
 
 // p
-//   font-family: var(--atd-sans-font)
+//   font-family: var(--fcs-sans-font)
 //   font-weight: 400
 
 .logo-text
@@ -61,7 +61,7 @@ body
   font-weight: 800
   letter-spacing: .06rem
   text-transform: uppercase
-  color: var(--atd-off-white)
+  color: var(--fcs-off-white)
   font-size: .9rem
 
 @include breakpoint(md)
@@ -72,14 +72,14 @@ body
 // Sections
 section
   h1
-    color: var(--atd-bright-white)
+    color: var(--fcs-bright-white)
     text-transform: uppercase
 
     &::after
       content: ''
       width: 3rem
       height: 4px
-      background-color: var(--atd-primary)
+      background-color: var(--fcs-primary)
       display: block
       margin-top: 2rem
       margin-bottom: 4rem

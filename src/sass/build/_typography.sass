@@ -16,6 +16,13 @@
   font-weight: 400
   font-display: swap
   src: local(''), url('../fonts/inconsolata-v32-latin-regular.woff2') format('woff2'), url('../fonts/inconsolata-v32-latin-regular.woff') format('woff')
+/* dm-mono-regular - latin */
+@font-face
+  font-family: 'DM Mono'
+  font-style: normal
+  font-weight: 400
+  font-display: swap
+  src: local(''), url('../fonts/dm-mono-v14-latin-regular.woff2') format('woff2'), url('../fonts/dm-mono-v14-latin-regular.woff') format('woff')
 
 /* kumbh-sans-regular - latin */
 @font-face
@@ -37,7 +44,7 @@
 // Font
 :root
   --fcs-sans-font: 'Inter', sans-serif
-  --fcs-mono-font: 'Inconsolata', sans-serif
+  --fcs-mono-font: 'DM Mono', sans-serif
   --fcs-logo-font: 'Kumbh Sans', sans-serif
 body
   font-family: var(--fcs-sans-font)
@@ -51,27 +58,30 @@ body
 .logo-text
   font-family: var(--fcs-logo-font)
   font-weight: 800
-  letter-spacing: .06rem
+  // letter-spacing: .06rem
   text-transform: uppercase
-  color: var(--fcs-off-white)
+  color: var(--fcs-body-bg)
   font-size: .9rem
 
 @include breakpoint(md)
   .logo-text
-    letter-spacing: 1rem
+    letter-spacing: .5rem
     font-size: 1rem
 
 // Sections
 section
   h2
-    color: var(--fcs-bright-white)
+    font-family: var(--fcs-logo-font)
+    font-weight: 800
+    color: var(--fcs-primary)
     text-transform: uppercase
+    margin-bottom: 2rem
 
-    &::after
-      content: ''
-      width: 3rem
-      height: 4px
-      background-color: var(--fcs-primary)
-      display: block
-      margin-top: 2rem
-      margin-bottom: 4rem
+    // &::after
+    //   content: ''
+    //   width: 3rem
+    //   height: 4px
+    //   background-color: var(--fcs-primary)
+    //   display: block
+    //   margin-top: 2rem
+    //   margin-bottom: 4rem

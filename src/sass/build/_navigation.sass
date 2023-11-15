@@ -1,4 +1,6 @@
 header
+  padding-top: 4rem
+  background-color: var(--fcs-bright-white)
   transition: all .3s ease
 
   a
@@ -7,12 +9,15 @@ header
     &.logo-text
       padding: 0
       
-  &.is-scrolled
-    background-color: var(--fcs-navbar-bg)
+  // &.is-scrolled
+  //   background-color: var(--fcs-navbar-bg)
 
   // https://github.com/Ivy-Walobwa/responsive-pure-css-menu/blob/main/index.html
   // Mobile Menu
   /* Nav menu */
+  > div
+    border: 1px solid var(--fcs-mid-gray)
+    // background-color: var(--fcs-bright-white)
   nav
     width: 100%
     // height: 100%
@@ -199,4 +204,4 @@ header
       padding: inherit
 
       &:hover
-        color: var(--fcs-bright-white)
+        color: var(--fcs-primary)

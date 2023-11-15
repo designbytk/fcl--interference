@@ -13,7 +13,7 @@ header
     align-items: center
     display: flex
     width: 100%
-    padding-left: 2rem
+    padding: 1rem
     // flex-direction: column
 
 
@@ -21,30 +21,32 @@ header
     flex-grow: 1
     display: flex
     align-items: center
+    letter-spacing: .5rem
 
     svg
-      width: 60px
+      // width: 60px
       margin-right: 1rem
       transition: all .3s ease
 
-  &.is-scrolled
-    .site-logo
-      svg
-        // width: 75px
-        opacity: .6
-        color: var(--fcs-primary)
-        // margin-right: 1.2rem
-    .logo-text
-      transition: all .3s ease
-      // letter-spacing: .5rem
+  // &.is-scrolled
+  //   .site-logo
+  //     svg
+  //       // width: 75px
+  //       width: 3rem
+  //       opacity: .6
+  //       color: var(--fcs-primary)
+  //       // margin-right: 1.2rem
+  //   .logo-text
+  //     transition: all .3s ease
+  //     // letter-spacing: .5rem
 
 
 @include breakpoint(md)
   header
     > div
       flex-direction: column
-      width: min(95%, 1440px)
-      padding-left: 0
+      // width: min(95%, 1440px)
+      // padding-left: 0
 
     .site-logo
       flex-grow: 1
@@ -52,14 +54,16 @@ header
       align-items: center
 
       svg
-        width: 100px
-        margin-right: 2rem
+        // width: 100px
+        width: 3rem
+        margin-right: 1rem
         // transition: all .3s ease
     &.is-scrolled
       .site-logo
         display: flex
         svg
-          width: 75px
+          // width: 75px
+          width: 3rem
           opacity: .6
           color: var(--fcs-primary)
           margin-right: 1.2rem
@@ -70,33 +74,58 @@ header
 
 
 // Main container - constrained width + Main header constrained width
-
-main
+header > div,
+main,
+footer
   width: 100%
   margin-inline: auto
+
+main
+  padding-top: 9rem
+
+  section
+    padding: 3rem
+    border-right: 1px solid var(--fcs-mid-gray)
+    border-left: 1px solid var(--fcs-mid-gray)
+    border-bottom: 1px solid var(--fcs-mid-gray)
+
+    div
+      svg
+        max-height: 10rem
+        max-width: 15rem
   
   
 @include breakpoint(sm)
-  main
+  header > div,
+  main,
+  footer
     max-width: 540px
 
 @include breakpoint(md)
-  main
+  header > div,
+  main,
+  footer
     max-width: 720px
 
 @include breakpoint(lg)
   header
     > div
       flex-direction: row
-  main
+      max-width: 960px
+  main,
+  footer
     max-width: 960px
 
 @include breakpoint(xl) 
-  main
+  header > div,
+  main,
+  footer
     max-width: 1140px
 
 @include breakpoint(xxl)
-  main
+  header > div,
+  main,
+  footer
     max-width: 1320px
 
 // Sections
@@ -155,5 +184,7 @@ main
 @import 'sections/contact'
 
 @import 'sections/footer'
+
+@import 'sections/_video-cards'
 
   

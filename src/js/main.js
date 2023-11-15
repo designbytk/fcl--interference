@@ -20,19 +20,19 @@ var navbar = document.querySelector('header')
 // });
 
 // scroll event to change desktop on scroll
-document.addEventListener("DOMContentLoaded", function(){
+// document.addEventListener("DOMContentLoaded", function(){
 
 
-  window.addEventListener('scroll', function() {
-      if (window.scrollY > 120) {
-        navbar.classList.add('is-scrolled');
-        // add padding top to show content behind navbar
+//   window.addEventListener('scroll', function() {
+//       if (window.scrollY > 120) {
+//         navbar.classList.add('is-scrolled');
+//         // add padding top to show content behind navbar
     
-      } else {
-        navbar.classList.remove('is-scrolled');
-      } 
-  });
-}); 
+//       } else {
+//         navbar.classList.remove('is-scrolled');
+//       } 
+//   });
+// }); 
 
 const footer = document.querySelector('footer');
 const options = {

@@ -34,6 +34,26 @@ var navbar = document.querySelector('header')
 //   });
 // }); 
 
+// Get modal element
+const modal = document.getElementById('video-modal'); 
+
+// Get open button
+const openBtn = document.getElementById('open-btn');
+
+// Get close button 
+const closeBtn = document.getElementById('close-modal');
+
+// Listen for open click
+openBtn.addEventListener('click', () => {
+  modal.showModal();
+});
+
+// Listen for close click  
+closeBtn.addEventListener('click', () => {
+  modal.close();
+});
+
+
 const footer = document.querySelector('footer');
 const options = {
   rootMargin: '0px',

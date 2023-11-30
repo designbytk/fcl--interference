@@ -20,3 +20,7 @@ body
 img, picture, svg, video
   display: block
   max-width: 100%
+
+/* Revert Modal native behavior */
+:where(dialog:modal) 
+  all: revert

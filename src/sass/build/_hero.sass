@@ -1,4 +1,7 @@
 //interim styles to allow for building other sections of the page
+:root
+  --icon-size: 2rem
+
 @media only screen and (max-width: 480px)
   .is-scrolled ~ main
     .hero-home
@@ -16,12 +19,26 @@
   border: 1px solid var(--fcs-mid-gray)
   // flex-direction: column
   // margin-bottom: 3rem
+  div
+    display: flex
+    flex-direction: column
+    align-items: baseline
+    gap: 1rem
 
   h1
     font-family: var(--fcs-mono-font)
     font-size: 2rem
     font-weight: 400
     letter-spacing: -.1rem
+
+  // button
+  //   color: white
+  button::before
+    --icon-size: 2rem
+    content: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22%23FFF%22%20class%3D%22bi%20bi-play-circle%22%20viewBox%3D%220%200%2016%2016%22%3E%0A%20%20%3Cpath%20d%3D%22M8%2015A7%207%200%201%201%208%201a7%207%200%200%201%200%2014zm0%201A8%208%200%201%200%208%200a8%208%200%200%200%200%2016z%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M6.271%205.055a.5.5%200%200%201%20.52.038l3.5%202.5a.5.5%200%200%201%200%20.814l-3.5%202.5A.5.5%200%200%201%206%2010.5v-5a.5.5%200%200%201%20.271-.445z%22%2F%3E%0A%3C%2Fsvg%3E')
+    width: var(--icon-size)
+    margin-bottom: calc( var(--icon-size) / -10 )
+    
 
 @include breakpoint(md)
   .hero
@@ -33,3 +50,34 @@
 @include breakpoint(lg)
   .hero
     min-height: 60vh
+
+
+// // dialog
+// dialog
+//   // position: fixed
+//   // top: 0
+//   // left: 0
+//   // right: 0 
+//   // bottom: 0
+//   // display: flex
+//   // align-items: center
+//   // justify-content: center
+//   // background: rgba(0,0,0,0.5)
+dialog::backdrop
+  background: rgb(0 0 0 / 0.9)
+//   iframe
+//     max-width: 80%
+
+// // #video-modal
+// //   background: white
+// //   border-radius: 6px
+// //   width: 90%
+// //   max-width: 600px
+
+// #close-modal
+//   position: absolute
+//   top: 10px
+//   right: 10px
+//   background: white
+//   border: none  
+//   // cursor: pointer

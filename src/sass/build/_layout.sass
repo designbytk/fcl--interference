@@ -40,6 +40,23 @@ header
   //     transition: all .3s ease
   //     // letter-spacing: .5rem
 
+// Button
+button
+  // font-size: 1.2rem
+  color: var(--fcs-bright-white)
+  padding-block: 1rem
+  padding-inline: 3rem
+  background-color: var(--fcs-primary)
+  text-decoration: none
+  text-align: center
+  text-transform: uppercase
+  border: 0
+  display: flex
+  align-items: center
+  gap: .5rem
+
+  &:hover
+    background-color: rgba(255, 33, 26,.8)
 
 @include breakpoint(md)
   header
@@ -179,7 +196,7 @@ main
 
       
 
-@import 'sections/vehicle-wraps'
+// @import 'sections/vehicle-wraps'
 
 @import 'sections/contact'
 

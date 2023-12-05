@@ -1,4 +1,5 @@
 // Header and Navbar - likely will be inlined for improved page speed
+
 header
   position: fixed
   right: 0
@@ -17,35 +18,16 @@ header
     // flex-direction: column
 
 
-  .site-logo
-    flex-grow: 1
-    display: flex
-    align-items: center
-    letter-spacing: .5rem
-
-    svg
-      // width: 60px
-      margin-right: 1rem
-      transition: all .3s ease
-
-  // &.is-scrolled
-  //   .site-logo
-  //     svg
-  //       // width: 75px
-  //       width: 3rem
-  //       opacity: .6
-  //       color: var(--fcs-primary)
-  //       // margin-right: 1.2rem
-  //   .logo-text
-  //     transition: all .3s ease
-  //     // letter-spacing: .5rem
+// @include breakpoint(lg)
+//   header
+//     padding-top: 4rem
 
 // Button
 button
   // font-size: 1.2rem
   color: var(--fcs-bright-white)
   padding-block: 1rem
-  padding-inline: 3rem
+  padding-inline: 2rem
   background-color: var(--fcs-primary)
   text-decoration: none
   text-align: center
@@ -64,31 +46,10 @@ button
       flex-direction: column
       // width: min(95%, 1440px)
       // padding-left: 0
+  button
+    padding-inline: 3rem
 
-    .site-logo
-      flex-grow: 1
-      display: flex
-      align-items: center
-
-      svg
-        // width: 100px
-        width: 3rem
-        margin-right: 1rem
-        // transition: all .3s ease
-    &.is-scrolled
-      .site-logo
-        display: flex
-        svg
-          // width: 75px
-          width: 3rem
-          opacity: .6
-          color: var(--fcs-primary)
-          margin-right: 1.2rem
-
-      .logo-text
-        transition: all .3s ease
-        letter-spacing: .5rem
-
+  
 
 // Main container - constrained width + Main header constrained width
 header > div,
@@ -98,53 +59,43 @@ footer
   margin-inline: auto
 
 main
-  padding-top: 9rem
-
+  padding-top: 6rem
+  padding-inline: 1rem
 
   section
     border-right: 1px solid var(--fcs-gray)
     border-left: 1px solid var(--fcs-gray)
     border-bottom: 1px solid var(--fcs-gray)
-    scroll-margin-top: 4rem
+    border-top: 1px solid var(--fcs-gray)
+    scroll-margin-top: 2rem
     display: flex
+    flex-direction: column
+    margin-bottom: 1rem
     
 
     .bio-pic
       display: flex
-      border-inline: 1px dashed var(--fcs-gray)
+      border-inline: none
       border-top: 1.5px dotted var(--fcs-gray)
-      margin-top: 3rem
+      margin-top: 0
+      justify-content: center
 
       img
         min-width: 200px
         padding: 1rem
         align-self: start
+        border-inline: 1px dashed var(--fcs-gray)
 
 
     h2
       margin: 0
       padding-inline: 1rem
+      padding-block: .5rem
       border-left: .5px solid var(--fcs-gray)
-
-    // &:nth-of-type(-n+2)
-    //   h2
-    //     display: flex
-    //     align-items: center
-    //     padding: 0
-        
-    //     &::before
-    //       content: ""
-    //       color: var(--fcs-gray)
-    //       border-left: 3px solid
-    //       height: 3rem
-    //       display: block
-    //       margin-bottom: 1rem
-              
     
     p
       padding: 3rem
-
-      margin-block: 3rem
+      margin-block: 0
       border-top: 1.5px dotted var(--fcs-gray)
       position: relative
 
@@ -174,8 +125,9 @@ main
       outline: 1px solid var(--fcs-gray)
       display: block
       position: absolute
-      top: 0
+      top: auto
       right: 0
+      bottom: 0
   #about
     position: relative
     &::after
@@ -185,14 +137,14 @@ main
       outline: 1.5px dotted var(--fcs-gray)
       display: block
       position: absolute
-      top: 1.5rem
-      right: 0
+      top: auto
+      right: auto
+      bottom: 0
+      left: 0
 
   #partners
-    
-    padding: 3rem
+    padding: 1rem
     align-items: center
-
     background-size: 1.2rem 1.2rem
     background-image: linear-gradient(to right,rgba(228, 228, 228, 0.5)1px,transparent 1px),linear-gradient(to bottom,rgba(219, 219, 219, 0.5),transparent 1px)
     
@@ -200,9 +152,72 @@ main
       border-left: 0
       writing-mode: inherit
       transform: rotate(0deg)
-    
+      padding-inline: 0
+      padding-block: 0
 
-  
+    div
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: space-around
+      flex-grow: 1
+      gap: 2rem
+      padding: 2rem
+
+
+@include breakpoint(lg)
+  main
+    padding-top: 9rem
+    padding-inline: 0
+
+    section
+      flex-direction: row
+      margin-bottom: 0
+      border-top: none
+      scroll-margin-top: 4rem
+
+      h2
+        padding-block: auto
+      p
+        padding: 3rem
+        margin-block: 3rem
+
+      .bio-pic
+        // display: flex
+        border-inline: 1px dashed var(--fcs-gray)
+        border-top: 1.5px dotted var(--fcs-gray)
+        margin-top: 3rem
+
+        img
+          min-width: 200px
+          padding: 1rem
+          align-self: start
+          border-inline: none
+
+    #company
+      &::after
+        top: 0
+        // right: 0
+        bottom: auto
+    #about
+      &::after
+        position: absolute
+        top: 1.5rem
+        right: 0
+        bottom: auto
+        left: auto
+    #partners
+      padding: 3rem
+
+      h2
+        padding-inline: 1rem
+        padding-block: .5rem
+
+      div
+        padding: 0
+        flex-direction: row
+
+    
 @include breakpoint(sm)
   header > div,
   main,
@@ -238,61 +253,12 @@ main
 
 // Sections
 
-@import 'sections/service-cards'
-
-.section-cta
-  margin-block: 3rem
-  background-color: var(--fcs-primary-action)
-  // background-color: rgba(0, 0, 0, .3)
-  display: flex
-  align-items: center
-  text-transform: uppercase
-  gap: 1rem
-  margin-inline: 1rem
-  flex-direction: column
-  padding: 3rem 3rem 3rem 3rem
-
-  p
-    font-size: 1.4rem
-    flex-grow: 1
-    text-align: center
-
-  a.cta-btn
-    font-size: 1.2rem
-    color: var(--fcs-bright-white)
-    padding-block: 1rem
-    padding-inline: 3rem
-    // background-color: rgba(0, 0, 0, .6) 
-    background-color: rgba(255, 33, 26,.4)
-    text-decoration: none
-    text-align: center
-
-    &:hover
-      background-color: rgba(255, 33, 26,.8)
-      
-
-@include breakpoint(md)
-  .section-cta
-    margin-inline: 2rem
-    flex-direction: row
-    padding: 3rem 3rem 3rem 0
-
-    a[href="/#services"]
-      display: none
-
-@include breakpoint(lg)
-  .section-cta
-    a[href="/#services"]
-      display: inherit
-
-      
-
-// @import 'sections/vehicle-wraps'
-
 @import 'sections/contact'
+
+@import 'sections/dialogs'
 
 @import 'sections/footer'
 
-@import 'sections/_video-cards'
+@import 'sections/video-cards'
 
   

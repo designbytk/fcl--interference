@@ -53,6 +53,12 @@ closeBtn.addEventListener('click', () => {
   modal.close();
 });
 
+modal.addEventListener('click', (event) => {
+  if ( event.target == modal ) {
+    modal.close();
+  }
+})
+
 
 const footer = document.querySelector('footer');
 const options = {
@@ -77,3 +83,14 @@ const observer = new IntersectionObserver(callback, options);
 if (window.innerWidth <= 840) {
   observer.observe(footer);
 } 
+
+
+// Mobile menu toggle state when menu item selected -- nav doesn't leave the page
+
+// document.getElementById("myCheckbox").checked = true;
+const navElements = document.querySelectorAll('nav li a');
+navElements.forEach(navElement => {
+  navElement.addEventListener('click', function(event) {
+    document.getElementById("mobile-menu").checked = false;
+  });
+});

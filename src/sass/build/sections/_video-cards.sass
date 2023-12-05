@@ -1,17 +1,24 @@
 .video-cards
-  margin-top: 2rem
+  margin-top: 1rem
   display: grid
-  grid-template-columns: 1fr 1fr 1fr
-  gap: 2rem
+  grid-template-columns: 1fr
+  gap: 1rem
 
   div
-    border: 1px solid var(--fcs-mid-gray)
+    border: 1px solid var(--fcs-gray)
     
     > *
       padding: 1rem
     
     p
-      border-top: 1px solid var(--fcs-mid-gray)
+      border-top: 1px solid var(--fcs-gray)
       font-family: var(--fcs-mono-font)
+
+@include breakpoint(md)
+  .video-cards
+    margin-top: 2rem
+    grid-template-columns: 1fr 1fr 1fr
+    gap: 2rem
+
 
     

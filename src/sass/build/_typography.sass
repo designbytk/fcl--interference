@@ -61,12 +61,24 @@ body
   // letter-spacing: .06rem
   text-transform: uppercase
   color: var(--fcs-body)
-  font-size: .9rem
+  font-size: 1rem
+  letter-spacing: 0
+  width: min-content
+
+  span
+    left: -9999px
+    position: absolute
+    
 
 @include breakpoint(md)
   .logo-text
     letter-spacing: .5rem
-    font-size: 1rem
+    // font-size: 1rem
+    width: auto
+
+    span
+      position: relative
+      left: auto
 
 // Sections
 section
@@ -75,8 +87,8 @@ section
     font-family: var(--fcs-mono-font)
     text-transform: none
     font-size: 2rem
-    writing-mode: vertical-lr
-    transform: rotate(180deg)
+    writing-mode: horizontal-tb
+    transform: rotate(0deg)
     color: var(--fcs-primary-dark)
 
     // &::before
@@ -85,3 +97,10 @@ section
 
   p
     line-height: 170%
+
+@include breakpoint(md)
+  section
+    h2
+      writing-mode: vertical-lr
+      transform: rotate(180deg)
+

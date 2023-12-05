@@ -1,0 +1,15 @@
+dialog
+  width: 90%
+  
+  &::backdrop
+    background: rgb(0 0 0 / 0.9)
+
+
+  iframe
+    width: 100%
+    // height: auto
+    aspect-ratio: 16 / 9
+
+@include breakpoint(lg)
+  dialog
+    width: 50%

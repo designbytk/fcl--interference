@@ -3,19 +3,19 @@ footer
   align-items: start
   flex-direction: column
   color: var(--fcs-mid-gray)
-  margin-top: 2rem
+  margin-top: 1rem
+  padding-inline: 1rem
+  // min-height: calc( 100dvh - 7rem )
+  
 
   > div
-    // border-top: 1px solid var(--fcs-primary-dark)
-    padding-top: 2rem
-    // padding-bottom: 4rem
-    // width: min(95%,1440px)
+    padding: 1rem
     width: 100%
     display: grid
-    // align-items: center
     gap: 4rem
-    grid-template-columns: max-content 2fr 1fr
-    border-top: 2.5px solid var(--fcs-mid-gray)
+    grid-template-columns: auto
+    border-top: 0
+    background-color: var(--fcs-primary-light)
 
     a
       text-decoration: none
@@ -61,10 +61,10 @@ footer
       list-style-type: none
       display: flex
       flex-direction: column
-      gap: 1rem
+      gap: 1.5rem
 
       li a
-        color: var(--fcs-body)
+        color: var(--fcs-mid-gray)
 
         &:hover
           color: var(--fcs-primary)
@@ -79,7 +79,7 @@ footer
     .logo-text
       width: min-content
       letter-spacing: .2rem
-  // Copywrite 
+  // Copyright
   > p
     text-align: center
     font-size: .8rem
@@ -88,10 +88,22 @@ footer
 
 @include breakpoint(md)
   footer
+    margin-top: 2rem
+    padding-inline: 0
+    // min-height: auto
+
     > div
-      flex-direction: column
+      // flex-direction: column
+      border-top: 2.5px solid var(--fcs-gray)
+      background: none
+      display: grid
+      gap: 4rem
+      grid-template-columns: max-content 2fr 1fr
+
+      ul
+        gap: 1rem
 
 @include breakpoint(lg)
   footer
     > div
-      flex-direction: row
+      // flex-direction: row

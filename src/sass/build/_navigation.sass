@@ -1,16 +1,22 @@
 header
-  padding-top: 4rem
+  padding-top: 1rem
+  padding-inline: 1rem
   background-color: var(--fcs-bright-white)
   transition: all .3s ease
 
-  a
-    text-decoration: none
+  .site-logo
+    flex-grow: 1
+    display: flex
+    align-items: center
+    // letter-spacing: .5rem
 
-    &.logo-text
-      padding: 0
+    svg
+      width: 3.5rem
+      margin-right: 0
+      transition: all .3s ease
+
+  
       
-  // &.is-scrolled
-  //   background-color: var(--fcs-navbar-bg)
 
   // https://github.com/Ivy-Walobwa/responsive-pure-css-menu/blob/main/index.html
   // Mobile Menu
@@ -22,7 +28,7 @@ header
     width: 100%
     // height: 100%
     position: fixed
-    background-color: var(--fcs-body)
+    background-color: var(--fcs-primary-dark)
     overflow: hidden
     bottom: 0
     top: 0
@@ -40,25 +46,8 @@ header
       flex-direction: column
       padding: 6rem 2rem
 
-      li:nth-child(1)
-        a
-          display: flex
-          align-items: center
-          &::after
-            content: 'Home'
-            color: var(--fcs-primary-muted)
-            font-size: 1.2rem
-            font-family: var(--fcs-sans-font)
-            letter-spacing: .4ch
-            text-transform: uppercase
-            text-decoration: none
-            margin-left: .6rem
-
-        // &:hover
-        //   color: var(--fcs-bright-white)
-
   a
-    color: var(--fcs-primary-muted)
+    color: var(--fcs-bright-white)
     font-size: 1.2rem
     font-family: var(--fcs-sans-font)
     letter-spacing: .4ch
@@ -66,22 +55,6 @@ header
     text-decoration: none
     padding: 2rem
     display: block
-
-    &[href='#services']
-      display: none
-            
-
-      
-      
-  // .menu a
-  //   display: block
-  //   padding: 30px
-  //   color: var(--fcs-bright-white)
-
-
-  // .menu a:hover
-  //   background-color: var(--grey)
-
 
   nav
     max-height: 0
@@ -99,7 +72,7 @@ header
     z-index: 199
 
     span
-      background: var(--fcs-bright-white)
+      background: var(--fcs-primary-dark)
       display: block
       height: 2px
       position: relative
@@ -107,7 +80,7 @@ header
 
       &::before,
       &::after
-        background: var(--fcs-bright-white)
+        background: var(--fcs-primary-dark)
         content: ''
         display: block
         height: 100%
@@ -135,17 +108,27 @@ header
   input:checked ~ label span::before
     transform: rotate(-45deg)
     top:0
-
+    background: var(--fcs-primary)
 
 
   input:checked ~ label span::after
     transform: rotate(45deg)
     top:0
+    background: var(--fcs-primary)
 
 
 
 @include breakpoint(md)
   header
+    .site-logo
+      flex-grow: 1
+      display: flex
+      align-items: center
+
+      svg
+        width: 3rem
+        margin-right: 1rem
+        // transition: all .3s ease
     label
       display: none
     nav
@@ -169,9 +152,6 @@ header
           a
             font-size: .8rem
             
-            &[href='#services']
-              display: block
-
         li:nth-child(1)
           a
             &::after
@@ -187,6 +167,9 @@ header
 
 @include breakpoint(lg)
   header
+    padding-top: 4rem
+    padding-inline: 0
+
     nav
       position: relative
       bottom: auto

@@ -16,7 +16,7 @@
   align-items: center
   // margin-top: 6rem
   padding: 3rem
-  border: 1px solid var(--fcs-mid-gray)
+  border: 1px solid var(--fcs-gray)
   // flex-direction: column
   // margin-bottom: 3rem
   div
@@ -52,32 +52,54 @@
     min-height: 60vh
 
 
-// // dialog
-// dialog
-//   // position: fixed
-//   // top: 0
-//   // left: 0
-//   // right: 0 
-//   // bottom: 0
-//   // display: flex
-//   // align-items: center
-//   // justify-content: center
-//   // background: rgba(0,0,0,0.5)
 dialog::backdrop
   background: rgb(0 0 0 / 0.9)
-//   iframe
-//     max-width: 80%
 
-// // #video-modal
-// //   background: white
-// //   border-radius: 6px
-// //   width: 90%
-// //   max-width: 600px
 
-// #close-modal
-//   position: absolute
-//   top: 10px
-//   right: 10px
-//   background: white
-//   border: none  
-//   // cursor: pointer
+// build the three elements image
+.hero
+  div:nth-child(2)
+    // background-color: purple
+    display: grid
+    aspect-ratio: 1 / 1
+    gap: 0
+    // grid-template-columns: 17.5% 50% 53.4% 77.4%
+    // grid-template-rows: 18.6% 53.5% 58.8% 78.3%
+    // based on 850px
+    // grid-template-columns: 149px 399px 454px 658px
+    // grid-template-rows: 158px 455px 500px
+    
+    > div
+      aspect-ratio: 1 / 1
+
+    .square-one
+      background-color: var(--fcs-mid-gray)
+      // display: block
+      grid-column-start: 1
+      grid-column-end: 5
+      grid-row-start: 1
+      grid-row-end: 3
+      margin-right: -3%
+      margin-bottom: 3%
+      
+    
+    .circle
+      background-color: black
+      border-radius: 50%
+      grid-column-start: 3
+      grid-column-end: 7
+      grid-row-start: 2
+      grid-row-end: 5
+      margin: -10%
+      max-width: 110%
+      // display: block
+    
+    .square-two
+      background-color: var(--fcs-mid-gray)
+      grid-column-start: 5
+      grid-column-end: 9
+      grid-row-start: 4
+      grid-row-end: 6
+      margin-top: 10%
+      margin-left: -6%
+      // display: block

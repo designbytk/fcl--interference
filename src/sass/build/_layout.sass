@@ -56,7 +56,7 @@ button
   gap: .5rem
 
   &:hover
-    background-color: rgba(255, 33, 26,.8)
+    background-color: var(--fcs-primary-dark)
 
 @include breakpoint(md)
   header
@@ -100,17 +100,108 @@ footer
 main
   padding-top: 9rem
 
-  section
-    padding: 3rem
-    border-right: 1px solid var(--fcs-mid-gray)
-    border-left: 1px solid var(--fcs-mid-gray)
-    border-bottom: 1px solid var(--fcs-mid-gray)
 
+  section
+    border-right: 1px solid var(--fcs-gray)
+    border-left: 1px solid var(--fcs-gray)
+    border-bottom: 1px solid var(--fcs-gray)
+    scroll-margin-top: 4rem
+    display: flex
+    
+
+    .bio-pic
+      display: flex
+      border-inline: 1px dashed var(--fcs-gray)
+      border-top: 1.5px dotted var(--fcs-gray)
+      margin-top: 3rem
+
+      img
+        min-width: 200px
+        padding: 1rem
+        align-self: start
+
+
+    h2
+      margin: 0
+      padding-inline: 1rem
+      border-left: .5px solid var(--fcs-gray)
+
+    // &:nth-of-type(-n+2)
+    //   h2
+    //     display: flex
+    //     align-items: center
+    //     padding: 0
+        
+    //     &::before
+    //       content: ""
+    //       color: var(--fcs-gray)
+    //       border-left: 3px solid
+    //       height: 3rem
+    //       display: block
+    //       margin-bottom: 1rem
+              
+    
+    p
+      padding: 3rem
+
+      margin-block: 3rem
+      border-top: 1.5px dotted var(--fcs-gray)
+      position: relative
+
+
+      &::before
+        content: " "
+        background-color: var(--fcs-primary-light)
+        position: absolute
+        top: 1rem
+        left: 1rem
+        right: 1rem
+        bottom: 1rem
+        z-index: -1
+ 
     div
       svg
         max-height: 10rem
-        max-width: 15rem
-  
+        min-width: 15rem
+
+  // corner square
+  #company
+    position: relative
+    &::after
+      content: ''
+      width: 3rem
+      height: 3rem
+      outline: 1px solid var(--fcs-gray)
+      display: block
+      position: absolute
+      top: 0
+      right: 0
+  #about
+    position: relative
+    &::after
+      content: ''
+      width: 1.5rem
+      height: 1.5rem
+      outline: 1.5px dotted var(--fcs-gray)
+      display: block
+      position: absolute
+      top: 1.5rem
+      right: 0
+
+  #partners
+    
+    padding: 3rem
+    align-items: center
+
+    background-size: 1.2rem 1.2rem
+    background-image: linear-gradient(to right,rgba(228, 228, 228, 0.5)1px,transparent 1px),linear-gradient(to bottom,rgba(219, 219, 219, 0.5),transparent 1px)
+    
+    h2
+      border-left: 0
+      writing-mode: inherit
+      transform: rotate(0deg)
+    
+
   
 @include breakpoint(sm)
   header > div,

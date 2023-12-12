@@ -110,14 +110,16 @@ main
         bottom: 1rem
         z-index: -1
  
-    div
-      svg
-        max-height: 10rem
-        min-width: 15rem
 
   // corner square
   #company
     position: relative
+
+    img
+      display: block
+      aspect-ratio: 1 / 1
+      object-fit: cover
+
     &::after
       content: ''
       width: 3rem
@@ -147,13 +149,14 @@ main
     align-items: center
     background-size: 1.2rem 1.2rem
     background-image: linear-gradient(to right,rgba(228, 228, 228, 0.5)1px,transparent 1px),linear-gradient(to bottom,rgba(219, 219, 219, 0.5),transparent 1px)
+    flex-direction: column
     
     h2
       border-left: 0
       writing-mode: inherit
       transform: rotate(0deg)
       padding-inline: 0
-      padding-block: 0
+      padding-block: 2rem
 
     div
       display: flex
@@ -163,6 +166,11 @@ main
       flex-grow: 1
       gap: 2rem
       padding: 2rem
+
+      svg
+        min-height: 4rem
+
+// @include breakpoint(md)
 
 
 @include breakpoint(lg)
@@ -187,6 +195,7 @@ main
         border-inline: 1px dashed var(--fcs-gray)
         border-top: 1.5px dotted var(--fcs-gray)
         margin-top: 3rem
+        aspect-ratio: 1 / 1
 
         img
           min-width: 200px
@@ -207,15 +216,23 @@ main
         bottom: auto
         left: auto
     #partners
-      padding: 3rem
+      // padding: 0 3rem 3rem 3rem
 
-      h2
-        padding-inline: 1rem
-        padding-block: .5rem
+      // h2
+      //   padding-inline: 0
+      //   padding-block: 2rem
 
       div
-        padding: 0
+        // display: flex
+        // grid-template-columns: repeat(3, 1fr)
+        align-items: center
+        justify-content: space-between
+        width: 100%
+        gap: 8rem
+        padding-inline: 2rem
         flex-direction: row
+
+
 
     
 @include breakpoint(sm)

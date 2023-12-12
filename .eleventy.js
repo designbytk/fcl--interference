@@ -16,8 +16,8 @@ module.exports = function (eleventyConfig) {
 	
 	// Copy `src/static/` to `dist/`
 	// eleventyConfig.addPassthroughCopy({ "src/static/": "/" });
-	eleventyConfig.addPassthroughCopy({ "src/img": "/img" });
-	eleventyConfig.addPassthroughCopy({ "src/fonts": "/fonts" });
+	eleventyConfig.addPassthroughCopy({ "src/static": "/" });
+	// eleventyConfig.addPassthroughCopy({ "src/fonts": "/fonts" });
 
 	// pug settings - add eleventy filters to pug
 	global.filters = eleventyConfig.javascriptFunctions;

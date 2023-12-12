@@ -4,15 +4,60 @@
   grid-template-columns: 1fr
   gap: 1rem
 
-  div
+  > div
     border: 1px solid var(--fcs-gray)
     
+
     > *
       padding: 1rem
     
-    p
+      // p
       border-top: 1px solid var(--fcs-gray)
       font-family: var(--fcs-mono-font)
+
+    
+      a
+        color: var(--fcs-primary)
+        display: flex
+        align-items: center
+        gap: 1rem
+
+        &::before
+          content: url('../img/noun-pdf-file-1704521_24px.png')
+        
+        &:hover
+          text-decoration: none
+      
+    p
+      span
+        font-size: .7rem
+        text-transform: uppercase
+        background-color: var(--fcs-primary)
+        padding: 2px 2px 2px 4px
+        letter-spacing: .2rem
+        color: var(--fcs-bright-white)
+        margin-bottom: 2px
+
+    .video-open
+      display: block
+      background-color: var(--fcs-primary-dark)
+      background-clip: content-box
+
+      img
+        opacity: .6
+
+      &:hover
+        img
+          opacity: 1
+
+      // &::after
+      //   content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-play-fill' viewBox='0 0 16 16'%3E%3Cpath d='m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z'/%3E%3C/svg%3E")
+      //   text-decoration: none
+      //   font-size: 3rem
+      //   padding: 1rem
+      //   background-color: rgba(255, 255, 255, .2)
+        
+
 
 @include breakpoint(md)
   .video-cards

@@ -135,40 +135,48 @@ header
     nav
       width: calc( 100vw - 4rem )
       position: fixed
-      bottom: 2rem
-      background-color: var(--fcs-primary)
+      bottom: 0
+      // border: 1px solid var(--fcs-gray)
+      background-color: var(--fcs-bright-white)
       transition: all .3s ease
       // display: block
       max-height: inherit
       top: auto
       left: auto
+      color: var(--fcs-body)
+      padding-bottom: 2rem
 
       ul
         flex-direction: row
         padding: 0
         gap: 0
-        justify-content: space-between
+        // justify-content: space-between
+        border: 1px solid var(--fcs-gray)
 
         li
+          // outline: 1px solid var(--fcs-gray)
+          border-right: 1px solid var(--fcs-gray)
+          flex: 1 0 auto
           a
+            text-align: center
             font-size: .8rem
             
-        li:nth-child(1)
-          a
-            &::after
-              content: ''
+          &:nth-child(4)
+            border-right: none
+            
 
       &.hide-nav
         opacity: 0
     a
-      color: var(--fcs-bright-white)
+      color: var(--fcs-body)
       display: block
       padding: 1rem 1rem
 
 
 @include breakpoint(lg)
   header
-    padding-top: 4rem
+    // width: calc( 100vw - 4rem )
+    // padding-top: 4rem
     padding-inline: 0
 
     nav
@@ -176,12 +184,20 @@ header
       bottom: auto
       width: auto
       background-color: inherit
+      padding-bottom: 0
 
       ul
         gap: 2rem
+        border: none
 
-        &::before
-          display: none
+        li
+          border-right: none
+
+        a
+          flex: 0 0 auto
+
+        // &::before
+        //   display: none
 
     a
       color: var(--fcs-primary-muted)

@@ -11,9 +11,9 @@ footer
   > div
     padding: 1rem
     width: 100%
-    display: grid
+    display: flex
     gap: 4rem
-    grid-template-columns: auto
+    flex-direction: column
     border-top: 0
     background-color: var(--fcs-primary-light)
 
@@ -89,21 +89,30 @@ footer
 @include breakpoint(md)
   footer
     margin-top: 2rem
-    padding-inline: 0
+    padding-inline: 2rem
     // min-height: auto
 
     > div
-      // flex-direction: column
+      flex-direction: row
+      flex-wrap: wrap
+      gap: 1rem
+
+      ul
+        gap: 1rem
+        flex-direction: row
+
+@include breakpoint(lg)
+  footer
+    padding-inline: 0
+
+    > div
       border-top: 2.5px solid var(--fcs-gray)
       background: none
       display: grid
       gap: 4rem
       grid-template-columns: max-content 2fr 1fr
+      // flex-direction: row
 
       ul
-        gap: 1rem
-
-@include breakpoint(lg)
-  footer
-    > div
-      // flex-direction: row
+        flex-direction: column
+        gap: 2rem

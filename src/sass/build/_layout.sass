@@ -170,10 +170,18 @@ main
       svg
         min-height: 4rem
 
-// @include breakpoint(md)
+@include breakpoint(md)
+  header
+    padding-top: 2rem
+    padding-inline: 2rem
+  main
+    padding-inline: 2rem
 
 
 @include breakpoint(lg)
+  header
+    padding-top: 4rem
+    padding-inline: 0
   main
     padding-top: 9rem
     padding-inline: 0
@@ -235,17 +243,17 @@ main
 
 
     
-@include breakpoint(sm)
-  header > div,
-  main,
-  footer
-    max-width: 540px
+// @include breakpoint(sm)
+//   header > div,
+//   main,
+//   footer
+//     max-width: 540px
 
-@include breakpoint(md)
-  header > div,
-  main,
-  footer
-    max-width: 720px
+// @include breakpoint(md)
+//   header > div,
+//   main,
+//   footer
+//     max-width: 720px
 
 @include breakpoint(lg)
   header

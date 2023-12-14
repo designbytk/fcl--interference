@@ -24,8 +24,8 @@ videoTriggers.forEach(trigger => {
   trigger.addEventListener('click', (event) => {
     event.preventDefault();
     const videoId = event.target.tagName == 'IMG' ? event.target.parentElement.dataset.video : event.target.dataset.video
-    console.log(event.target);
-    console.log(videoId);
+    // console.log(event.target);
+    // console.log(videoId);
     // setIframeSource(event.target.dataset.video);
     setIframeSource(videoId);
     modal.showModal();

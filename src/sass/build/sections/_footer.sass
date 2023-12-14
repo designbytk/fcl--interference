@@ -95,11 +95,13 @@ footer
     > div
       flex-direction: row
       flex-wrap: wrap
-      gap: 1rem
+      // gap: 1rem
 
       ul
+        width: 100%
         gap: 1rem
         flex-direction: row
+        justify-content: space-around
 
 @include breakpoint(lg)
   footer
@@ -111,8 +113,10 @@ footer
       display: grid
       gap: 4rem
       grid-template-columns: max-content 2fr 1fr
+      padding: 3rem 0 0 0
       // flex-direction: row
 
       ul
         flex-direction: column
-        gap: 2rem
+        gap: 1.5rem
+        justify-content: start

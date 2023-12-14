@@ -39,16 +39,6 @@ button
 
   &:hover
     background-color: var(--fcs-primary-dark)
-
-@include breakpoint(md)
-  header
-    > div
-      flex-direction: column
-      // width: min(95%, 1440px)
-      // padding-left: 0
-  button
-    padding-inline: 3rem
-
   
 
 // Main container - constrained width + Main header constrained width
@@ -170,12 +160,55 @@ main
       svg
         min-height: 4rem
 
+// @include breakpoint(md)
+//   header
+//     > div
+//       flex-direction: column
+//       // width: min(95%, 1440px)
+//       // padding-left: 0
+//   button
+//     padding-inline: 3rem
+  
+//   main
+//     #partners
+//       div
+//         // display: flex
+//         // grid-template-columns: repeat(3, 1fr)
+//         align-items: center
+//         justify-content: space-between
+//         width: 100%
+//         gap: 8rem
+//         padding-inline: 2rem
+//         flex-direction: row
+
+
 @include breakpoint(md)
   header
     padding-top: 2rem
     padding-inline: 2rem
+
+    > div
+      flex-direction: column
+      // width: min(95%, 1440px)
+      // padding-left: 0
+  button
+    padding-inline: 3rem
+  
   main
     padding-inline: 2rem
+
+    #partners
+      h2
+        padding-block: 0
+      div
+        // display: flex
+        // grid-template-columns: repeat(3, 1fr)
+        align-items: center
+        justify-content: space-between
+        width: 100%
+        gap: 4rem
+        padding-inline: 0
+        flex-direction: row
 
 
 @include breakpoint(lg)
@@ -224,21 +257,26 @@ main
         bottom: auto
         left: auto
     #partners
+      h2
+        padding-block: 2rem
+      div
+        gap: 8rem
+        padding-inline: 2rem
       // padding: 0 3rem 3rem 3rem
 
       // h2
       //   padding-inline: 0
       //   padding-block: 2rem
 
-      div
-        // display: flex
-        // grid-template-columns: repeat(3, 1fr)
-        align-items: center
-        justify-content: space-between
-        width: 100%
-        gap: 8rem
-        padding-inline: 2rem
-        flex-direction: row
+      // div
+      //   // display: flex
+      //   // grid-template-columns: repeat(3, 1fr)
+      //   align-items: center
+      //   justify-content: space-between
+      //   width: 100%
+      //   gap: 8rem
+      //   padding-inline: 2rem
+      //   flex-direction: row
 
 
 
@@ -278,7 +316,7 @@ main
 
 // Sections
 
-@import 'sections/contact'
+// @import 'sections/contact'
 
 @import 'sections/dialogs'
 

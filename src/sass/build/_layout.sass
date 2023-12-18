@@ -81,7 +81,7 @@ main
       margin: 0
       padding-inline: 1rem
       padding-block: .5rem
-      border-left: .5px solid var(--fcs-gray)
+      // border-left: .5px solid var(--fcs-gray)
     
     p
       padding: 3rem
@@ -160,27 +160,6 @@ main
       svg
         min-height: 4rem
 
-// @include breakpoint(md)
-//   header
-//     > div
-//       flex-direction: column
-//       // width: min(95%, 1440px)
-//       // padding-left: 0
-//   button
-//     padding-inline: 3rem
-  
-//   main
-//     #partners
-//       div
-//         // display: flex
-//         // grid-template-columns: repeat(3, 1fr)
-//         align-items: center
-//         justify-content: space-between
-//         width: 100%
-//         gap: 8rem
-//         padding-inline: 2rem
-//         flex-direction: row
-
 
 @include breakpoint(md)
   header
@@ -201,14 +180,22 @@ main
       h2
         padding-block: 0
       div
-        // display: flex
-        // grid-template-columns: repeat(3, 1fr)
         align-items: center
         justify-content: space-between
         width: 100%
         gap: 4rem
         padding-inline: 0
         flex-direction: row
+
+    #company
+      margin-top: 1rem
+      flex-direction: row
+      flex-wrap: wrap
+      img
+        aspect-ratio: 9 / 1
+        object-fit: cover
+        
+
 
 
 @include breakpoint(lg)
@@ -227,6 +214,8 @@ main
 
       h2
         padding-block: auto
+        border-left: .5px solid var(--fcs-gray)
+        
       p
         padding: 3rem
         margin-block: 3rem
@@ -245,6 +234,14 @@ main
           border-inline: none
 
     #company
+      margin-top: 0
+      flex-wrap: inherit
+
+      img
+        aspect-ratio: 1 / 1
+        max-width: 300px
+        object-fit: cover
+
       &::after
         top: 0
         // right: 0
@@ -262,36 +259,8 @@ main
       div
         gap: 8rem
         padding-inline: 2rem
-      // padding: 0 3rem 3rem 3rem
-
-      // h2
-      //   padding-inline: 0
-      //   padding-block: 2rem
-
-      // div
-      //   // display: flex
-      //   // grid-template-columns: repeat(3, 1fr)
-      //   align-items: center
-      //   justify-content: space-between
-      //   width: 100%
-      //   gap: 8rem
-      //   padding-inline: 2rem
-      //   flex-direction: row
 
 
-
-    
-// @include breakpoint(sm)
-//   header > div,
-//   main,
-//   footer
-//     max-width: 540px
-
-// @include breakpoint(md)
-//   header > div,
-//   main,
-//   footer
-//     max-width: 720px
 
 @include breakpoint(lg)
   header

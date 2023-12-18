@@ -80,7 +80,7 @@
 @include breakpoint(md)
   .hero
     min-height: 40vh
-    grid-template-columns: 1.5fr 1fr
+    grid-template-columns: 1fr 1fr
     padding: 3rem
     margin-bottom: 0
   
@@ -94,12 +94,16 @@
         grid-row-start: auto
 
     h1
-      font-size: 4rem
+      // font-size: 2rem
       text-align: left
 
 @include breakpoint(lg)
   .hero
     min-height: 60vh
+    grid-template-columns: 1.5fr 1fr
+
+    h1
+      font-size: 4rem
 
 
 

@@ -61,6 +61,9 @@ main
     display: flex
     flex-direction: column
     margin-bottom: 1rem
+    background-image: url(../img/brushed_aluminum_004.png)
+    background-position: top left
+    background-repeat: repeat-x
     
 
     .bio-pic
@@ -71,7 +74,7 @@ main
       justify-content: center
 
       img
-        min-width: 200px
+        max-width: 200px
         padding: 1rem
         align-self: start
         border-inline: 1px dashed var(--fcs-gray)
@@ -139,6 +142,8 @@ main
     align-items: center
     background-size: 1.2rem 1.2rem
     background-image: linear-gradient(to right,rgba(228, 228, 228, 0.5)1px,transparent 1px),linear-gradient(to bottom,rgba(219, 219, 219, 0.5),transparent 1px)
+    // background-position: top left
+    background-repeat: repeat
     flex-direction: column
     
     h2
@@ -175,6 +180,18 @@ main
   
   main
     padding-inline: 2rem
+
+    #about
+      flex-direction: row
+      flex-wrap: wrap
+      h2
+        width: 100%
+      p:first-of-type
+        width: calc( 100% - 200px )
+      img
+        border-left: 1px dashed var(--fcs-gray)
+        border-right: none
+
 
     #partners
       h2
@@ -228,7 +245,7 @@ main
         aspect-ratio: 1 / 1
 
         img
-          min-width: 200px
+          // min-width: 200px
           padding: 1rem
           align-self: start
           border-inline: none
@@ -247,6 +264,11 @@ main
         // right: 0
         bottom: auto
     #about
+      flex-wrap: nowrap
+      h2
+        width: auto
+      img
+        border-left: none
       &::after
         position: absolute
         top: 1.5rem

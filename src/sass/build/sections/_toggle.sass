@@ -26,7 +26,9 @@
     opacity: 1
 
   [type="checkbox"]
+    // display: none
     appearance: none
+    -webkit-appearance: none
     padding: 0
     -webkit-print-color-adjust: exact
     print-color-adjust: exact
@@ -42,8 +44,19 @@
     border-color: #6E6E76
     border-width: 1px
     border-radius: 0px
+    // 
+    position: absolute
+    width: 1px
+    height: 1px
+    padding: 0
+    margin: -1px
+    overflow: hidden
+    clip: rect(0, 0, 0, 0)
+    white-space: nowrap
+    border-width: 0
 
     &:focus
+      appearance: none
       outline: 2px solid transparent
       outline-offset: 2px
       --tw-ring-inset:var(--tw-empty)
@@ -55,6 +68,8 @@
       box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)
 
     &:checked
+      // display: none
+      appearance: none
       border-color: transparent
       background-color: currentColor
       background-size: 100% 100%
@@ -150,12 +165,6 @@
 
 .ctlyr
   z-index: 10
-
-
-
-
-
-
 
 .clgvu
   background-image: linear-gradient(to top, var(--tw-gradient-stops))

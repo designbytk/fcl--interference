@@ -1,0 +1,181 @@
+/*! CSS Used from: https://preview.cruip.com/appy/style.css
+
+.form-switch
+  input
+    font-family: inherit
+    font-size: 100%
+    font-weight: inherit
+    line-height: inherit
+    color: inherit
+    margin: 0
+    padding: 0
+
+    &::placeholder
+      opacity: 1
+      color: #A2A2A8
+
+    &:disabled
+      cursor: default
+
+  svg
+    display: block
+    vertical-align: middle
+
+  input::placeholder
+    color: #6E6E76
+    opacity: 1
+
+  [type="checkbox"]
+    appearance: none
+    padding: 0
+    -webkit-print-color-adjust: exact
+    print-color-adjust: exact
+    display: inline-block
+    vertical-align: middle
+    background-origin: border-box
+    user-select: none
+    flex-shrink: 0
+    // height: 1rem
+    // width: 1rem
+    color: #2563eb
+    background-color: #fff
+    border-color: #6E6E76
+    border-width: 1px
+    border-radius: 0px
+
+    &:focus
+      outline: 2px solid transparent
+      outline-offset: 2px
+      --tw-ring-inset:var(--tw-empty)
+      --tw-ring-offset-width:2px
+      --tw-ring-offset-color:#fff
+      --tw-ring-color:#2563eb
+      --tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color)
+      --tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color)
+      box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)
+
+    &:checked
+      border-color: transparent
+      background-color: currentColor
+      background-size: 100% 100%
+      background-position: center
+      background-repeat: no-repeat
+      background-image: url(data:image/svg+xml,%3csvg\ viewBox=\'0\ 0\ 16\ 16\'\ fill=\'white\'\ xmlns=\'http://www.w3.org/2000/svg\'%3e%3cpath\ d=\'M12.207\ 4.793a1\ 1\ 0\ 010\ 1.414l-5\ 5a1\ 1\ 0\ 01-1.414\ 0l-2-2a1\ 1\ 0\ 011.414-1.414L6.5\ 9.086l4.293-4.293a1\ 1\ 0\ 011.414\ 0z\'/%3e%3c/svg%3e)
+
+      &:hover, &:focus
+        border-color: transparent
+        background-color: currentColor
+
+  *, ::before, ::after
+    --tw-border-spacing-x:0
+    --tw-border-spacing-y:0
+    --tw-translate-x:0
+    --tw-translate-y:0
+    --tw-rotate:0
+    --tw-skew-x:0
+    --tw-skew-y:0
+    --tw-scale-x:1
+    --tw-scale-y:1
+    --tw-scroll-snap-strictness:proximity
+    --tw-ring-offset-width:0px
+    --tw-ring-offset-color:#fff
+    --tw-ring-color:rgb(59 130 246 / 0.5)
+    --tw-ring-offset-shadow:0 0 #0000
+    --tw-ring-shadow:0 0 #0000
+    --tw-shadow:0 0 #0000
+    --tw-shadow-colored:0 0 #0000
+
+
+.form-switch
+  position: relative
+  user-select: none
+  width: 44px
+  display: flex
+  justify-content: center
+  flex-direction: column
+  margin-left: 0.75rem
+  
+
+  label
+    display: block
+    height: 1.5rem
+    cursor: pointer
+    overflow: hidden
+    border-radius: 9999px
+
+    > span:first-child
+      position: absolute
+      display: block
+      background-color: var(--fcs-site-bg)
+      border-radius: 9999px
+      width: 20px
+      height: 20px
+      top: 2px
+      left: 2px
+      right: 50%
+      transition: all .15s ease-out
+
+    > span:last-child
+      position: absolute
+      width: 1px
+      height: 1px
+      padding: 0
+      margin: -1px
+      overflow: hidden
+      clip: rect(0, 0, 0, 0)
+      white-space: nowrap
+      border-width: 0
+    
+    svg
+      position: absolute
+      inset: 0px
+      fill: currentColor
+      color: var(--fcs-bright-white)
+
+
+  input[type="checkbox"]
+    &:checked + label
+      background-color: var(--fcs-border-color)
+
+      > span:first-child
+        left: 22px
+
+    &.light-switch + label
+      background-color: var(--fcs-border-color)
+
+
+.switch
+  padding: 0
+  position: relative
+
+.ctlyr
+  z-index: 10
+
+
+
+
+
+
+
+.clgvu
+  background-image: linear-gradient(to top, var(--tw-gradient-stops))
+
+.chf91
+  --tw-gradient-from:#F4F4F5 var(--tw-gradient-from-position)
+  --tw-gradient-to:rgb(244 244 245 / 0) var(--tw-gradient-to-position)
+  --tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)
+
+.chb9f
+  --tw-gradient-to:#fff var(--tw-gradient-to-position)
+
+.c4u31
+  fill: currentColor
+
+.text-white
+  --tw-text-opacity:1
+  color: rgb(255 255 (255 / var(--tw-text-opacity)))
+
+.c8mz9
+  --tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05)
+  --tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color)
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)

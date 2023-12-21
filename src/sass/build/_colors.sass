@@ -10,7 +10,68 @@
   --fcs-mid-gray: #707070
   --fcs-gray: #c2c2c2
   --fcs-light-gray: #dddddd
+  --fcs-site-bg: var(--fcs-bright-white)
+  --fcs-border-color: var(--fcs-gray)
+  --fcs-base-text: var(--fcs-body)
+  --fcs-header-text: var(--fcs-body)
+  --fcs-header-links: var(--fcs-body)
+  --fcs-section-content: var(--fcs-primary-light)
+  --fcs-section-edge: url(../img/brushed_aluminum_004.png)
+  --trident: #231f20
+  --unimetal: var(--fcs-body)
+  // --marion: 
+
+
+.dark  
+  --fcs-bright-white: #fff
+  --fcs-body: #0d0000
+  --fcs-primary: hsl(202, 73%, 60%)
+  //#31ade3
+  --fcs-primary-light:	hsl(202, 90%, 96%)
+  --fcs-primary-dark: hsl(202, 65%, 20%)
+  --fcs-off-white: hsl(5, 6%, 79%)
+  --fcs-mid-gray: #707070
+  --fcs-gray: #c2c2c2
+  --fcs-light-gray: #dddddd
+  --fcs-site-bg: hsl(202, 65%, 5%)
+  --fcs-border-color: var(--fcs-primary)
+  --fcs-base-text: var(--fcs-primary)
+  --fcs-header-text: var(--fcs-primary-light)
+  --fcs-header-links: var(--fcs-mid-gray)
+  --fcs-section-content: var(--fcs-primary-dark)
+  --fcs-section-edge: url(../img/brushed_aluminum_005.png)
+  --trident: var(--fcs-light-gray)
+  --unimetal: var(--fcs-mid-gray)
+
+
+// @media (prefers-color-scheme: dark)
+//   --fcs-site-bg: hsl(202, 65%, 5%)
+
+// @media (prefers-color-scheme: light)
+//   --fcs-site-bg: var(--fcs-bright-white)
 
 body
-  background-color: var(--fcs-bright-white)
+  background-color: var(--fcs-site-bg)
   // background-color: var(--fcs-body-bg)
+
+
+.dark
+  .hero
+    div:nth-child(2)
+      mix-blend-mode: plus-lighter
+      filter: contrast(120%) brightness(70%)
+
+  #partners
+    background-color: hsl(203, 81%, 7%)
+    background-image: linear-gradient(to right,hsl(203,50%,17%) 1px,transparent 1px),linear-gradient(to bottom,hsl(203,50%,21%),transparent 1px)
+    
+    // div
+    //   background-color: hsl(203, 81%, 7%)
+
+      // svg:last-child
+      //   filter: invert(.5)
+  
+  .video-cards
+    > div
+      > * a::before
+        filter: invert(.9)

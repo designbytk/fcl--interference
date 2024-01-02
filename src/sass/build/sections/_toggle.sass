@@ -119,9 +119,16 @@
     border-radius: 9999px
 
     > span:first-child
+      // cww77 c1cr6 clgvu chf91 c8mz9 czjaw chb9f ctlyr
+      --tw-gradient-from:#F4F4F5 var(--tw-gradient-from-position)
+      --tw-gradient-to:rgb(244 244 245 / 0) var(--tw-gradient-to-position)
+      --tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)
+      --tw-gradient-to:#fff var(--tw-gradient-to-position)
+      z-index: 10
       position: absolute
       display: block
       background-color: var(--fcs-site-bg)
+      background-image: linear-gradient(to top, var(--tw-gradient-stops))
       border-radius: 9999px
       width: 20px
       height: 20px
@@ -129,6 +136,9 @@
       left: 2px
       right: 50%
       transition: all .15s ease-out
+      --tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05)
+      --tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color)
+      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
 
     > span:last-child
       position: absolute

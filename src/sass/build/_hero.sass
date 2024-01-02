@@ -7,11 +7,16 @@
   min-height: calc( 100dvh - 7rem )
   display: grid
   grid-template-columns: 1fr
-  align-items: center
+  align-items: baseline
   justify-items: center
   padding: 1rem
   border: 1px solid var(--fcs-border-color)
   margin-bottom: 1rem
+  background-image: url(../img/fcl-sparks_003.jpg)
+  background-clip: content-box
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: bottom right
   
   div
     display: flex
@@ -25,6 +30,8 @@
     font-weight: 400
     letter-spacing: -.1rem
     text-align: center
+    color: var(--fcs-hero)
+    margin-top: 4rem
 
   button::before
     --icon-size: 2rem
@@ -84,8 +91,9 @@
   .hero
     min-height: 40vh
     grid-template-columns: 1fr 1fr
-    padding: 3rem
+    padding: 1rem
     margin-bottom: 0
+    align-items: center
   
 
     div
@@ -99,15 +107,19 @@
     h1
       // font-size: 2rem
       text-align: left
+      margin-left: 2rem
+      margin-top: 0
 
 @include breakpoint(lg)
   .hero
     min-height: 60vh
-    grid-template-columns: 1.5fr 1fr
+    // grid-template-columns: 1.5fr 1fr
 
     h1
       font-size: 4rem
 
 
 
-
+.dark
+  .hero
+    filter: opacity(.8) saturate(200%)

@@ -39,14 +39,17 @@
         margin-bottom: 2px
 
     .video-trigger
-      display: block
+      display: flex
       background-color: var(--fcs-primary-dark)
       background-clip: content-box
       border-top: 0
+  
 
       img
         opacity: .6
         aspect-ratio: 16 / 9
+        object-fit: cover
+        flex-grow: 1
 
       &:hover
         img

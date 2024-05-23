@@ -16,11 +16,8 @@
   "license": "MIT",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "browserslist": "^4.22.1",
-    "dotenv": "^16.0.3",
     "esbuild": "^0.19.5",
     "lightningcss": "^1.22.1",
-    "pug": "^3.0.2",
     "sass": "^1.69.5"
   }
 }

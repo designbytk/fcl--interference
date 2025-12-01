@@ -15,11 +15,11 @@ This is a single-page application showcasing FCL Consulting and Sales' services,
 
 ## Tech Stack
 
-- **Static Site Generator**: [Eleventy (11ty)](https://www.11ty.dev/) v2.0.1
-- **Templating**: [Pug](https://pugjs.org/) templates with modular component structure
-- **Styling**: [Sass](https://sass-lang.com/) with compressed output
-- **JavaScript**: ES6+ with [esbuild](https://esbuild.github.io/) processing
-- **CSS Processing**: [Lightning CSS](https://lightningcss.dev/) for optimization
+- **Static Site Generator**: [Eleventy (11ty)](https://www.11ty.dev/) v3.1.2 (ESM)
+- **Templating**: [Pug](https://pugjs.org/) templates with @11ty/eleventy-plugin-pug
+- **Styling**: [Sass](https://sass-lang.com/) with esbuild-sass-plugin integration
+- **JavaScript**: ES6+ modules with [esbuild](https://esbuild.github.io/) processing
+- **CSS Processing**: Integrated Sass compilation with minification via esbuild
 - **Deployment**: [Netlify](https://netlify.com) with automated builds
 
 ## Project Structure
@@ -70,16 +70,18 @@ npm install
 ### Available Scripts
 
 - `npm run dev` - Build site and compile Sass (production build)
-- `npm run dev:eleventy` - Build Eleventy site only
-- `npm run dev:serve` - Start development server with live reload
-- `npm run dev:sass` - Compile Sass to compressed CSS
+- `npm run dev:eleventy` - Build Eleventy site only (includes integrated Sass compilation)
+- `npm run dev:serve` - Start development server with live reload and integrated asset processing
+- `npm run dev:sass` - Legacy Sass compilation (separate process)
 
 ### Development Workflow
 1. Run `npm run dev:serve` for live development with hot reload
 2. Edit Pug templates in `src/11ty/`
-3. Modify styles in `src/sass/`
-4. Update JavaScript in `src/js/`
+3. Modify styles in `src/sass/` (automatically processed via esbuild)
+4. Update JavaScript in `src/js/` (processed via esbuild)
 5. Static assets go in `src/static/`
+
+**Note**: The build process now integrates Sass compilation directly into Eleventy via esbuild, producing `dist/css/main.min.css` automatically.
 
 ## Deployment
 
@@ -90,11 +92,13 @@ The site is configured for Netlify deployment:
 
 ## Features
 
+- **Modern Architecture**: ESM (ES Modules) throughout with Node.js native module support
+- **Integrated Build Pipeline**: Sass compilation and JavaScript processing via esbuild during Eleventy builds
 - **Responsive Design**: Mobile-first approach with modern CSS Grid/Flexbox
 - **Video Integration**: YouTube video embeds with custom modal interface
 - **PDF Downloads**: Partner capability lists with direct download links
 - **Modern Typography**: Custom web fonts (Inter, Kumbh Sans, DM Mono)
-- **Performance Optimized**: Compressed CSS, optimized images, minimal JavaScript
+- **Performance Optimized**: Minified CSS, optimized images, minimal JavaScript
 - **SEO Ready**: Proper meta tags and semantic HTML structure
 
 ## Content Management

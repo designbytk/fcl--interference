@@ -1,13 +1,14 @@
 {
   "name": "interference",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Website for Frank Longo | FCL Consulting and Sales | fcl-cas.com",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev:eleventy": "npx eleventy",
-    "dev:serve": "npx eleventy --serve",
-    "dev:sass": "sass src/sass/main.sass:dist/css/main.css --no-charset --no-source-map --style compressed",
-    "dev": "npm run dev:eleventy && npm run dev:sass"
+    "dev": "npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve",
+    "watch": "npx @11ty/eleventy --watch",
+    "dev:clean": "rm -rf dist/*"
   },
   "author": "t.k.langston | designbytk.com | lnghll.com",
   "repository": {
@@ -16,9 +17,11 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
-    "esbuild": "^0.25.0",
-    "lightningcss": "^1.22.1",
-    "sass": "^1.69.5"
+    "@11ty/eleventy": "^3.1.2",
+    "@11ty/eleventy-plugin-pug": "^1.0.0",
+    "esbuild": "^0.27.0",
+    "esbuild-sass-plugin": "^3.3.1",
+    "lightningcss": "^1.30.2",
+    "sass": "^1.94.2"
   }
 }

@@ -21,7 +21,6 @@
     "@11ty/eleventy-plugin-pug": "^1.0.0",
     "esbuild": "^0.27.0",
     "esbuild-sass-plugin": "^3.3.1",
-    "lightningcss": "^1.30.2",
-    "sass": "^1.94.2"
+    "lightningcss": "^1.30.2"
   }
 }
